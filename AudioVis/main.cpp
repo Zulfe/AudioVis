@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.cpp
- * Author: Damon
+ * Author: Damon, Chris
  *
  * Created on September 11, 2016, 12:00 AM
  */
