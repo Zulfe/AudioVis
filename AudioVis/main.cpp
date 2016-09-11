@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include "RtAudio.h"
 
 using namespace std;
 
@@ -20,7 +21,19 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    cout << "Chris sucks!" << endl;
+  RtAudio *audio = 0;
+
+  // Default RtAudio constructor
+  try {
+    audio = new RtAudio();
+  }
+  catch (RtError &error) {
+    // Handle the exception here
+    error.printMessage();
+  }
+
+  // Clean up
+  delete audio;
     return 0;
 }
 
