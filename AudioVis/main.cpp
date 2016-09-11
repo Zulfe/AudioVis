@@ -20,7 +20,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-    cout << "Chris sucks!" << endl;
+    cout << "Zaymoon is GAY!!!" << endl;
     return 0;
 }
 
