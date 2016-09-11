@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.cpp
- * Author: Damon
+ * Author: Damon, Chris
  *
  * Created on September 11, 2016, 12:00 AM
  */
@@ -21,6 +21,7 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
+<<<<<<< HEAD
   RtAudio *audio = 0;
 
   // Default RtAudio constructor
@@ -34,6 +35,9 @@ int main(int argc, char** argv) {
 
   // Clean up
   delete audio;
+=======
+    cout << "allo" << endl;
+>>>>>>> origin/master
     return 0;
 }
 
