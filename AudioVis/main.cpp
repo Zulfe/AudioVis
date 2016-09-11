@@ -21,23 +21,20 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
-<<<<<<< HEAD
-  RtAudio *audio = 0;
-
-  // Default RtAudio constructor
-  try {
-    audio = new RtAudio();
+  RtAudio audio;
+  // Determine the number of devices available
+  unsigned int devices = audio.getDeviceCount();
+  // Scan through devices for various capabilities
+  RtAudio::DeviceInfo info;
+  for ( unsigned int i=0; i<devices; i++ ) {
+    info = audio.getDeviceInfo( i );
+    if ( info.probed == true ) {
+      // Print, for example, the maximum number of output channels for each device
+      std::cout << "device = " << i;
+      std::cout << ": maximum output channels = " << info.outputChannels << "\n";
+    }
   }
-  catch (RtError &error) {
-    // Handle the exception here
-    error.printMessage();
-  }
-
-  // Clean up
-  delete audio;
-=======
-    cout << "allo" << endl;
->>>>>>> origin/master
+  
     return 0;
 }
 
